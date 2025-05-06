@@ -17,6 +17,7 @@ A simple personal blog application built with **Python** and **Django**. This pr
 ```bash
 git clone https://github.com/yourusername/personal_blog.git
 cd personal_blog
+``` 
 
 ## Task from roadmap.sh
 
