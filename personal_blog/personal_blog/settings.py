@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'blog',
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'personal_blog.urls'
@@ -132,3 +134,11 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',  # Ensures only authenticated users can access the API
     ],
 }
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # Your Next.js development server
+    # Add your production domain when deployed
+]
+
+# If you need to allow credentials (cookies, etc.)
+CORS_ALLOW_CREDENTIALS = True
